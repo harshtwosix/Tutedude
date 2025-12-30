@@ -1,0 +1,151 @@
+
+/* Global reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Prevent any scroll */
+html, body {
+  height: 100vh;         /* Full viewport height */
+  width: 100vw;          /* Full viewport width */
+  overflow: hidden;      /* No scrollbars */
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+/* Navigation uses fixed vh height */
+#navigation-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 10vh;                 /* nav height in viewport units */
+  padding: 0 2vw;               /* viewport-based horizontal padding */
+}
+
+/* Simple inline boxes */
+.box {
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Links */
+a {
+  color: black;
+  text-decoration: none;
+}
+
+/* Logo scales with vw for width responsiveness */
+#Logo {
+  font-size: clamp(1.6rem, 2vw, 2.4rem);
+  font-weight: 700;
+}
+
+/* Panel spacing uses vw */
+#panel {
+  display: flex;
+  gap: 2vw;
+  align-items: center;
+}
+
+.navbar {
+  cursor: pointer;
+  color: rgb(92, 89, 89);
+  font-size: clamp(0.9rem, 1.2vw, 1.1rem);
+}
+
+/* Username chip */
+#username {
+  font-weight: 700;
+  font-size: clamp(1rem, 1.4vw, 1.2rem);
+  color: rgb(62, 62, 236);
+  background-color: rgb(175, 175, 236);
+  border-radius: 0.8vw;
+  padding: 0.4vw 0.8vw;
+}
+
+/* Hero fills remaining viewport: 100vh - nav height */
+#hero-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;           /* vertical centering */
+  height: calc(100vh - 10vh);    /* remaining viewport height */
+  padding: 0 4vw;                /* side breathing room */
+  gap: 3vw;                      /* spacing between columns */
+}
+
+/* Each side of hero uses flex */
+.content-box {
+  flex: 1;
+}
+
+/* Left content spacing and type scales in viewport units */
+#left-div {
+  padding-right: 2vw;
+}
+
+h1 {
+  line-height: 1.15;
+  font-size: clamp(1.6rem, 3.2vw, 3rem);
+}
+
+#blue-text {
+  color: rgb(24, 160, 233);
+}
+
+#description {
+  margin-top: 2vh;
+  font-size: clamp(0.95rem, 1.2vw, 1.1rem);
+  max-width: 48ch;
+  color: #404040;
+}
+
+/* CTA button uses vh/vw for consistent sizing */
+#Service-button {
+  margin-top: 3vh;
+  padding: 1.8vh 2.6vw;
+  border-radius: 2vw;
+  background-color: rgb(24, 160, 233);
+  color: white;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: clamp(0.95rem, 1.2vw, 1.1rem);
+  box-shadow: 0 0.6vh 1.2vh rgba(0,0,0,0.08);
+}
+
+/* Right side image scales within its column */
+#right-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  max-width: 40vw;        /* cap width to viewport proportion */
+  max-height: 70%;        /* keep it within hero height */
+  width: 100%;
+  height: auto;
+  object-fit: contain;    /* preserve aspect ratio */
+  border-radius: 0.8vw;
+}
+
+/* --- Responsive: stack on narrow screens without causing scroll --- */
+@media (max-width: 900px) {
+  #hero-section {
+    flex-direction: column;
+    justify-content: center;
+    gap: 2vh;
+    padding: 2vh 4vw;
+  }
+
+  /* Make image smaller vertically so content fits */
+  img {
+    max-width: 70vw;
+    max-height: 40vh;
+  }
+
+  #description {
+    max-width: 60ch;
+  }
+}

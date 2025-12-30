@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#navigation-container {
+    /* border: 2px solid red; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 20px 0px 20px;
+}
+
+.box {
+    display: inline;
+    /* border: 2px solid green; */
+}
+
+.navbar {
+    cursor: pointer;
+    color: rgb(92, 89, 89)
+
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+#Logo {
+    font-size: 2em;
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+#panel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 50px;
+    min-width: 400px;
+}
+
+#username {
+    font-weight: bold;
+    font-size: 24px;
+    color: rgb(62, 62, 236);
+    background-color: rgb(175, 175, 236);
+    border-radius: 7px;
+    margin-right: 5px;
+    padding: 3px;
+}
+
+#hero-section {
+    /* border: 2px solid red; */
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+.content-box {
+    /* border: 2px solid green; */
+    flex: 1;
+    padding: 50px;
+}
+
+#right-div {
+    padding-left: 100px;
+}
+
+img {
+    width: 425px;
+}
+
+#discription {
+    margin-top: 30px;
+    font-size: 17px;
+}
+
+#blue-text {
+    color: rgb(24, 160, 233);
+}
+
+#Service-button {
+    padding: 19px;
+    border-radius: 21px;
+    margin-top: 32px;
+    background-color: rgb(24, 160, 233);
+    color: white;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
